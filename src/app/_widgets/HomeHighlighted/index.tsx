@@ -21,13 +21,13 @@ export const HomeHighlightedComponent = (): JSX.Element => {
       }
     },
   });
-  const articlesToShow = articles.slice(0, 3);
+  const articlesToShow = articles.slice(0, 4);
   return (
     <>
     <p className="w-full flex justify-around text-gray-900 dark:text-gray-200 my-10 text-2xl">Highlighted Articles</p>
     <div className="w-full flex justify-around text-gray-900 dark:text-gray-200 my-10">
       
-      <div className="grid grid-cols-3 gap-x-5 gap-y-3 w-[80%]">
+      <div className="grid grid-cols-4 gap-x-5 gap-y-3 w-[80%]">
         {articlesToShow.map((a, index) => (
           <ArticleCard article={a} key={index} index={index} onItemClick={onItemClick} />
         ))}

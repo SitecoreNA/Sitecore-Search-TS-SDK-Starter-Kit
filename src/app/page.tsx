@@ -11,14 +11,7 @@ import { HTMBlockWidget } from '@sitecore-search/react';
 const Home = (): JSX.Element => {
   return (
     <>
-      <HTMBlockWidget rfkId={HOME_HERO_RFKID} />
-      <div className="mx-auto w-[80%]">
-        <QuestionsAnswers
-            rfkId="rfkid_qa"
-            defaultKeyphrase={DEFAULT_QUESTION}
-            defaultRelatedQuestions={2}
-          />
-      </div>  
+      <img src="https://streams1.perfectgame.org/images/Promotions/BotB-26_website-ROS%20banner.png" alt="Perfect Game Banner"/>
       <HomeHighlighted rfkId={HIGHLIGHTED_ARTICLES_RFKID} />
       </>
   );

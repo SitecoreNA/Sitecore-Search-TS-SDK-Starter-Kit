@@ -2,10 +2,10 @@
 
 
 // Overrides Sitecore logo in Header - Copy full logo URL from your customer's website
-export const LOGO_IMAGE_URL = ''; 
+export const LOGO_IMAGE_URL = 'https://dcb80a363a4153137b52-e3e81376f7ea45aa66e55c5aeb0ba59e.ssl.cf1.rackcdn.com/638252798209289334-PGOfficialLogo.webp'; 
 
 // helps adjust size of logo, if needed
-export const LOGO_IMAGE_HEIGHT = '30' 
+export const LOGO_IMAGE_HEIGHT = '76' 
 
 // Changes the background color of the header component. Must use Hex syntax
 export const HEADER_BACKGROUND_COLOR = '#FFFFFF'
@@ -26,4 +26,4 @@ export const DEFAULT_QUESTION = 'what is sitecore?'
 export const HIGHLIGHTED_ARTICLES_RFKID = 'search_home_highlight_articles' 
 
 // Change if you want to show a different content type in the highlighted articles widget. This value is case-sensitive. Default is website_content.
-export const HIGHLIGHTED_ARTICLES_CONTENT_TYPE = 'website_content'
+export const HIGHLIGHTED_ARTICLES_CONTENT_TYPE = 'website'

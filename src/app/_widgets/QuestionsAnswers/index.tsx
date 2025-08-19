@@ -15,7 +15,7 @@ type Question = {
 
 const MainQuestionComponent = ({ answer, question }: Question) => {
   return (
-    <div className="p-3 dark:text-gray-100">
+    <div className="p-3 dark:text-gray-100 border-b border-gray-200 mb-6">
       <h4 className="text-lg font-bold ">{question}</h4>
       <p className="mt-2">{answer}</p>
     </div>
@@ -74,6 +74,7 @@ export const QuestionsAnswersComponent = ({ defaultKeyphrase = '', defaultRelate
       }
     }
   });
+
   return (
     <div>
       {((answer && question) || relatedQuestionsResponse.length > 0) && (

@@ -29,7 +29,7 @@ const Search = (): JSX.Element => {
             key={`${query}-questions`}
             rfkId="rfkid_qa"
             defaultKeyphrase={query}
-            defaultRelatedQuestions={4}
+            defaultRelatedQuestions={3}
           />
           <SearchResults key={`${query}-search`} rfkId="rfkid_7" defaultKeyphrase={query} />
         </div>

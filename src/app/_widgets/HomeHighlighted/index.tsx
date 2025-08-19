@@ -24,16 +24,20 @@ export const HomeHighlightedComponent = (): JSX.Element => {
       }
     },
   });
-  const articlesToShow = articles.slice(0, 3);
+  const articlesToShow = articles.slice(0, 4);
   return (
     <>
-    <p className="w-full flex justify-around text-gray-900 dark:text-gray-200 my-10 text-2xl">Highlighted Articles</p>
-    <div className="w-full flex justify-around text-gray-900 dark:text-gray-200 my-10">
-      
-      <div className="grid grid-cols-3 gap-x-5 gap-y-3 w-[80%]">
-        {articlesToShow.map((a, index) => (
-          <ArticleCard article={a} key={index} index={index} onItemClick={onItemClick} />
-        ))}
+    <div className="container mx-auto px-4">
+      <div className="text-center mb-12">
+        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Get Inspired</h2>
+        <p className="text-xl text-gray-600">Discover amazing destinations and travel tips from our latest stories</p>
+      </div>
+      <div className="w-full flex justify-around text-gray-900 dark:text-gray-200 my-10">
+        <div className="grid grid-cols-4 gap-x-5 gap-y-3">
+          {articlesToShow.map((a, index) => (
+            <ArticleCard article={a} key={index} index={index} onItemClick={onItemClick} />
+          ))}
+        </div>
       </div>
     </div>
     </>

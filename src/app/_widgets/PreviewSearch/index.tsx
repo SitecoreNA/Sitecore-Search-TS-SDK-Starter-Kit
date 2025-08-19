@@ -27,7 +27,7 @@ type ArticleModel = {
 
 type InitialState = PreviewSearchInitialState<'itemsPerPage' | 'suggestionsList'>;
 
-export const PreviewSearchComponent = ({ defaultItemsPerPage = 6 }) => {
+export const PreviewSearchComponent = ({ defaultItemsPerPage = 6, isOpen, setIsSearchOpen }) => {
   const router = useRouter();
   const {
     actions: { onItemClick, onKeyphraseChange },
@@ -63,6 +63,7 @@ export const PreviewSearchComponent = ({ defaultItemsPerPage = 6 }) => {
   );
   const handleSubmit = (e: SyntheticEvent): void => {
     e.preventDefault();
+    if (isOpen) setIsSearchOpen(false)
     // eslint-disable-next-line @typescript-eslint/ban-ts-comment
     // @ts-ignore
     const target = e.target.query as HTMLInputElement;
@@ -71,13 +72,13 @@ export const PreviewSearchComponent = ({ defaultItemsPerPage = 6 }) => {
   };
   return (
     <PreviewSearch.Root>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="flex-1">
         <PreviewSearch.Input
           name="query"
-          className="w-[800px] rounded-sm box-border py-1 px-1 focus:outline-solid focus:outline-1 focus:outline-gray-200 dark:focus:outline-gray-900 dark:border-gray-900 border-1 bg-gray-100 dark:bg-gray-800 dark:text-gray-100"
+          className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
           onChange={keyphraseHandler}
           autoComplete="off"
-          placeholder="Type to search..."
+          placeholder="Search destinations, travel info..."
         />
       </form>
       <PreviewSearch.Content
@@ -101,7 +102,7 @@ export const PreviewSearchComponent = ({ defaultItemsPerPage = 6 }) => {
                   <Spinner loading={loading} />
                   {!loading &&
                     articles.map((article, index) => (
-                      
+
                       <PreviewSearch.Item key={article.id} asChild>
                         <PreviewSearch.ItemLink
                           href={article.url}

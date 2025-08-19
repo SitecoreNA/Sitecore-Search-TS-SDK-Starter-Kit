@@ -18,21 +18,22 @@ type ArticleCardItemCardProps = {
 const ArticleHorizontalItemCard = ({ className = '', article, onItemClick, index }: ArticleCardItemCardProps) => {
   const router = useRouter();
   const validImageUrl = article.image_url?.trim() ? article.image_url : DEFAULT_IMG_URL;
-
+  console.log(article)
   return (
     <ArticleCard.Root
       key={article.id}
-      className={`group flex flex-row p-4 my-4 flex-nowrap max-h-52 w-full relative border border-gray-300 dark:border-gray-600 rounded-md hover:shadow-lg hover:scale-105 hover:transition-all hover:ease-linear	hover:duration-300 focus-within:scale-105 focus-within:transition-all focus-within:ease-linear focus-within:duration-300 focus-within:hover:shadow-lg ${className}`}
+      className={`group flex flex-row my-4 flex-nowrap max-h-52 w-full relative border border-gray-200 dark:border-gray-600 rounded-md hover:shadow-lg hover:transition-all hover:ease-linear	hover:duration-300 focus-within:transition-all focus-within:ease-linear focus-within:duration-300 focus-within:hover:shadow-lg ${className} bg-white rounded-lg shadow-sm border p-6 transition-shadow `}
     >
-      <div className="w-[25%] flex-none overflow-hidden bg-gray-200 ">
+       {article.image_url &&
+      <div className="w-[25%] flex-none overflow-hidden bg-gray-200 rounded">
         <Image
           src={validImageUrl}
-          className="h-full w-full object-cover object-center lg:h-full lg:w-full"
+          className="h-full w-full object-cover object-center lg:h-full lg:w-full rounded"
           alt='alt'
           width={500}
           height={115}
         />
-      </div>
+      </div>}
       <div className="pl-4 grow flex-col">
         <a
           className="focus:outline-indigo-500"
@@ -48,10 +49,10 @@ const ArticleHorizontalItemCard = ({ className = '', article, onItemClick, index
           }}
         >
           <span aria-hidden="true" className="absolute inset-0"></span>
-          <ArticleCard.Title className="text-base">{article.name || article.title}</ArticleCard.Title>
+          <ArticleCard.Title className="text-lg font-semibold text-gray-900 mb-2">{article.name || article.title}</ArticleCard.Title>
         </a>
-        <ArticleCard.Subtitle className="mt-3 text-sm text-gray-600 dark:text-gray-300 h-[100px] overflow-hidden">
-          {article.subtitle}
+        <ArticleCard.Subtitle className="mt-3 text-sm text-gray-600 dark:text-gray-300 h-[100px] overflow-hidden line-clamp-2">
+          {article.description}
         </ArticleCard.Subtitle>
       </div>
     </ArticleCard.Root>

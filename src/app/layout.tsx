@@ -44,11 +44,11 @@ export default function RootLayout({
         <meta charSet="UTF-8" />
         <link rel="icon" href="/favicon.ico" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Sitecore Search Sandbox</title>
+        <title>Search - SkyWings </title>
       </head>
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
         <LanguageContext.Provider value={{ language, setLanguage }}>
-            <DataBar />
+            {/* <DataBar /> */}
             <div className="bg-white dark:bg-gray-700">
               <WidgetsProvider 
                 env={SEARCH_CONFIG.env}
@@ -58,7 +58,7 @@ export default function RootLayout({
               >
                 <SEOWidget rfkId={'demo_search_seo'} />
                 <Header />
-                <main className="w-full m-auto pt-[100px] min-h-[700px] bg-white dark:bg-gray-700">
+                <main className="">
                   {children}
                 </main>
                 <Footer />

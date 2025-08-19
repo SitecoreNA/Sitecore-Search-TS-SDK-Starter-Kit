@@ -55,7 +55,7 @@ const SearchFacets = ({ facets }: SearchFacetsProps) => {
         <AccordionFacets.Facet
           facetId={f.name}
           key={f.name}
-          className="block border-b mb-4 pb-4 border-gray-200 dark:border-gray-600"
+          className="block border-b mb-4 border-gray-200 bg-white rounded-lg shadow-sm border p-6"
         >
           <AccordionFacets.Header className="flex">
             <AccordionFacets.Trigger className="text-sm md:text-base font-semibold focus:outline-gray-700">

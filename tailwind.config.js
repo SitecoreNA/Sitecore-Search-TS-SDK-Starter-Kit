@@ -1,4 +1,7 @@
 /** @type {import('tailwindcss').Config} */
+
+import lineClamp from '@tailwindcss/line-clamp'
+
 module.exports = {
     darkMode: ['selector', '[data-theme="dark"]'],
     content: ['./pages/**/*.{ts,tsx}', './components/**/*.{ts,tsx}', './app/**/*.{ts,tsx}', './src/**/*.{ts,tsx}'],
@@ -17,6 +20,8 @@ module.exports = {
       extend: {
       },
     },
-    plugins: [],
+    plugins: [
+      lineClamp,
+    ],
   };
   

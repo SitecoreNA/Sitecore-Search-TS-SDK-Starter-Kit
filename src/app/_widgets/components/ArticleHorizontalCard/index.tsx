@@ -17,14 +17,19 @@ type ArticleCardItemCardProps = {
 
 const ArticleHorizontalItemCard = ({ className = '', article, onItemClick, index }: ArticleCardItemCardProps) => {
   const router = useRouter();
-  const validImageUrl = article.image_url?.trim() ? article.image_url : DEFAULT_IMG_URL;
+  let validImageUrl = article.image_url?.trim() ? article.image_url : DEFAULT_IMG_URL;
   console.log(article)
+
+  if (validImageUrl.includes('filters:no_upscale')) {
+    validImageUrl = undefined
+  }
+
   return (
     <ArticleCard.Root
       key={article.id}
       className={`group flex flex-row my-4 flex-nowrap max-h-52 w-full relative border border-gray-200 dark:border-gray-600 rounded-md hover:shadow-lg hover:transition-all hover:ease-linear	hover:duration-300 focus-within:transition-all focus-within:ease-linear focus-within:duration-300 focus-within:hover:shadow-lg ${className} bg-white rounded-lg shadow-sm border p-6 transition-shadow `}
     >
-       {article.image_url &&
+       {validImageUrl &&
       <div className="w-[25%] flex-none overflow-hidden bg-gray-200 rounded">
         <Image
           src={validImageUrl}
@@ -51,9 +56,10 @@ const ArticleHorizontalItemCard = ({ className = '', article, onItemClick, index
           <span aria-hidden="true" className="absolute inset-0"></span>
           <ArticleCard.Title className="text-lg font-semibold text-gray-900 mb-2">{article.name || article.title}</ArticleCard.Title>
         </a>
-        <ArticleCard.Subtitle className="mt-3 text-sm text-gray-600 dark:text-gray-300 h-[100px] overflow-hidden line-clamp-2">
+        <ArticleCard.Subtitle className="mt-3 text-sm text-gray-600 dark:text-gray-300 line-clamp-2">
           {article.description}
         </ArticleCard.Subtitle>
+        <div className="rounded-md border px-2.5 py-0.5 text-xs font-semibold border-transparent text-primary-foreground absolute top-4 right-4 bg-gray-300">{article.type}</div>
       </div>
     </ArticleCard.Root>
   );

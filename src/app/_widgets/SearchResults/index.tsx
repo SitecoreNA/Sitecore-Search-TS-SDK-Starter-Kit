@@ -14,6 +14,8 @@ import Spinner from '@/app/_widgets/components/Spinner';
 import { GridIcon, ListBulletIcon } from '@radix-ui/react-icons';
 import type { SearchResultsInitialState, SearchResultsStoreState } from '@sitecore-search/react';
 import { WidgetDataType, useSearchResults, widget } from '@sitecore-search/react';
+import HomeHighlighted from '@/app/_widgets/HomeHighlighted';
+import { HIGHLIGHTED_ARTICLES_RFKID } from '../../_data/customizations';
 import React from 'react';
 
 const SEARCH_CONFIG = {
@@ -80,6 +82,7 @@ export const SearchResultsComponent = ({
   const defaultCardView = 'list';
   const [dir, setDir] = useState(defaultCardView);
   const onToggle = (value = defaultCardView) => setDir(value);
+  console.log("DEFAULT ", defaultKeyphrase)
 
   if (isLoading) {
     return (
@@ -156,9 +159,10 @@ export const SearchResultsComponent = ({
           </React.Fragment>
         )}
         {totalItems <= 0 && !isFetching && (
-          <div className="w-full flex justify-center">
-            <h3>0 Results</h3>
-          </div>
+          // <div className="w-full flex justify-center">
+          //   <h3>0 Results</h3>
+          // </div>
+          <HomeHighlighted rfkId={HIGHLIGHTED_ARTICLES_RFKID} />
         )}
       </div>
     </div>

@@ -11,7 +11,7 @@ const Header = (): JSX.Element => {
   const [isSearchOpen, setIsSearchOpen] = useState(false)
 
   return (
-    <div className="relative">
+    <div className="sticky z-10 top-0 left-0">
       <header className="bg-white border-b border-gray-200 shadow-md">
         <div className="container mx-auto px-4">
           <div className="flex items-center justify-between h-16">

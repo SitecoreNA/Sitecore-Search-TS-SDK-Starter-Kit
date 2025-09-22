@@ -1,18 +1,17 @@
 export default function Footer() {
   return (
-    <footer className="bg-slate-800 text-white">
+    <footer className="bg-gray-900  text-white">
       <div className="max-w-7xl mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
-              <svg className="w-8 h-8 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M21 16v-2l-8-5V3.5c0-.83-.67-1.5-1.5-1.5S10 2.67 10 3.5V9l-8 5v2l8-2.5V19l-2 1.5V22l3.5-1 3.5 1v-1.5L13 19v-5.5l8 2.5z" />
-              </svg>
-              <span className="text-xl font-bold">SkyWings</span>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" stroke-linejoin="round" className="lucide lucide-zap h-8 w-8 text-emerald-400" aria-hidden="true"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"></path></svg>
+
+              <span className="text-xl font-bold">Gridwell</span>
             </div>
             <p className="text-gray-300 text-sm leading-relaxed">
-              Your trusted partner for comfortable and safe air travel worldwide.
+              Empowering minds, shaping futures, and building tomorrow's leaders through excellence in education and research.
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -40,31 +39,31 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <h3 className="text-lg font-semibold mb-4">About Gridwell</h3>
             <ul className="space-y-2">
               <li>
                 <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Book a Flight
+                  Services
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Manage Booking
+                  Committees and Groups
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Check-in Online
+                  Market Rules
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Flight Status
+                  Market Participants
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Baggage Info
+                  Grid Status
                 </a>
               </li>
             </ul>
@@ -72,31 +71,26 @@ export default function Footer() {
 
           {/* Support */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Support</h3>
+            <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
             <ul className="space-y-2">
               <li>
                 <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Help Center
+                  Careers
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Contact Us
+                  Glossary
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Travel Guidelines
+                  Locations
                 </a>
               </li>
               <li>
                 <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Terms & Conditions
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-gray-300 hover:text-white transition-colors">
-                  Privacy Policy
+                  Health Services
                 </a>
               </li>
             </ul>
@@ -104,33 +98,32 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
+            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-2">
-                <svg className="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" />
-                </svg>
-                <span className="text-gray-300">+1 (555) 123-4567</span>
+                <span className="text-gray-300">Ethics Point</span>
               </div>
               <div className="flex items-center space-x-2">
-                <svg className="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
-                </svg>
-                <span className="text-gray-300">support@skywings.com</span>
+                <span className="text-gray-300">Operations Messages</span>
               </div>
               <div className="flex items-center space-x-2">
-                <svg className="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
-                </svg>
-                <span className="text-gray-300">24/7 Customer Service</span>
+                <span className="text-gray-300">Project Status</span>
               </div>
+
+              <div className="flex items-center space-x-2">
+                <span className="text-gray-300">Service Level Agreements</span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <span className="text-gray-300">MIS Applications</span>
+              </div>
+
             </div>
           </div>
         </div>
 
         {/* Bottom Section */}
         <div className="border-t border-gray-700 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">© 2025 SkyWings Airlines. All rights reserved.</p>
+          <p className="text-gray-400 text-sm">© 2025 Gridwell. All rights reserved.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
               Privacy
@@ -138,8 +131,11 @@ export default function Footer() {
             <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
               Terms
             </a>
+             <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
+              Accessibility
+            </a>
             <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
-              Cookies
+              Contact Us
             </a>
           </div>
         </div>

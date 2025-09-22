@@ -35,3 +35,11 @@ body {
   padding: 0 !important; 
   overflow: auto !important;
 }
+
+.text-primary {
+  color:#3dbed1 !important;
+}
+
+.bg-destructive {
+  background-color: oklch(57.7% .245 27.325) !important;
+}

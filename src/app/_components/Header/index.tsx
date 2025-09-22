@@ -19,7 +19,7 @@ const Header = (): JSX.Element => {
             <div className="flex items-center space-x-2">
               <Link href="/" tabIndex={1} className="flex items-center space-x-2">
                 <Logo />
-                <span className="text-2xl font-bold text-blue-600">SkyWings</span>
+                <span className="text-xl font-bold">Gridwell</span>
               </Link>
             </div>
 

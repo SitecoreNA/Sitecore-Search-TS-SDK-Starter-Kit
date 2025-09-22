@@ -7,22 +7,19 @@ import withPageTracking from '@/app/_hocs/withPageTracking';
 import HomeHighlighted from '@/app/_widgets/HomeHighlighted';
 // import QuestionsAnswers from '@/app/_widgets/QuestionsAnswers'
 import HomepageBanner from "@/app/_components/HomepageBanner"
-import WhyChooseSkywings from "@/app/_components/WhyChooseSkywings"
-import InFlightExperience from "@/app/_components/InFlightExperience"
-import OurFleet from "@/app/_components/OurFleet"
-import PopularDestinations from "@/app/_components/PopularDestinations"
+import LiveGridConditions from "@/app/_components/LiveGridConditions"
+import QuickActions from "@/app/_components/QuickActions"
+import EngergyTips from "@/app/_components/EnergyTips"
 // import { HTMBlockWidget } from '@sitecore-search/react';
 
 const Home = (): JSX.Element => {
   return (
     <>
-      {/* <HTMBlockWidget rfkId={HOME_HERO_RFKID} /> */}
       <HomepageBanner />
-      <PopularDestinations />
-      <WhyChooseSkywings />
-      <InFlightExperience />
-      <OurFleet />
-      <HomeHighlighted rfkId={HIGHLIGHTED_ARTICLES_RFKID} />
+      <LiveGridConditions />
+      <QuickActions />
+      <EngergyTips />
+      {/* <HomeHighlighted rfkId={HIGHLIGHTED_ARTICLES_RFKID} /> */}
       {/* <div className="mx-auto w-[80%]">
         <QuestionsAnswers
             rfkId="rfkid_qa"
@@ -30,7 +27,7 @@ const Home = (): JSX.Element => {
             defaultRelatedQuestions={2}
           />
       </div> */}
-      </>
+    </>
   );
 }
 

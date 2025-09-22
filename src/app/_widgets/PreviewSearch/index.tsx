@@ -78,7 +78,7 @@ export const PreviewSearchComponent = ({ defaultItemsPerPage = 6, isOpen, setIsS
           className="w-full px-4 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent text-lg"
           onChange={keyphraseHandler}
           autoComplete="off"
-          placeholder="Search destinations, travel info..."
+          placeholder="Search content, grid status..."
         />
       </form>
       <PreviewSearch.Content

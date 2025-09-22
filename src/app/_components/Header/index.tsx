@@ -12,9 +12,9 @@ const Header = (): JSX.Element => {
 
   return (
     <div className="sticky z-10 top-0 left-0">
-      <header className="bg-white border-b border-gray-200 shadow-md">
+      <header className="w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex h-16 items-center justify-between">
             {/* Logo */}
             <div className="flex items-center space-x-2">
               <Link href="/" tabIndex={1} className="flex items-center space-x-2">
@@ -25,12 +25,11 @@ const Header = (): JSX.Element => {
 
             {/* Navigation */}
             <nav className="hidden md:flex items-center space-x-8">
-              <a className="text-gray-700 hover:text-blue-600 font-medium" href="#">Book</a>
-              <a className="text-gray-700 hover:text-blue-600 font-medium" href="#">Check In</a>
-              <a className="text-gray-700 hover:text-blue-600 font-medium" href="#">My Trips</a>
-              <a className="text-gray-700 hover:text-blue-600 font-medium" href="#">Flight Status</a>
-              <a className="text-gray-700 hover:text-blue-600 font-medium" href="#">Destinations</a>
-              <a className="text-gray-700 hover:text-blue-600 font-medium" href="#">Blogs</a>
+              <a className="text-gray-700 hover:text-blue-600 font-medium" href="#">Articles</a>
+              <a className="text-gray-700 hover:text-blue-600 font-medium" href="#">Committees and Groups</a>
+              <a className="text-gray-700 hover:text-blue-600 font-medium" href="#">Services</a>
+              <a className="text-gray-700 hover:text-blue-600 font-medium" href="#">Alerts</a>
+              <a className="text-gray-700 hover:text-blue-600 font-medium" href="#">Grid Status</a>
             </nav>
 
             <div className="flex items-center gap-4">
@@ -46,11 +45,6 @@ const Header = (): JSX.Element => {
                     d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
                   />
                 </svg>
-              </button>
-
-              <button href="#" className="px-4 py-2 text-gray-700 hover:text-blue-600 transition-colors">Sign In</button>
-              <button href="#" className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md transition-colors">
-                Join SkyWings
               </button>
             </div>
           </div>

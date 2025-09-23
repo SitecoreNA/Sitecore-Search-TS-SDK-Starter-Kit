@@ -20,7 +20,7 @@ export const FOOTER_TEXT_COLOR = '#111827'
 export const HOME_HERO_RFKID = 'home_hero' 
 
 // Overrides default question in the Q&A widget on the homepage
-export const DEFAULT_QUESTION = 'What are the top beach destinations?'
+export const DEFAULT_QUESTION = 'What can I do to conserve energy in a heatwave?'
 
 // Change if you choose to use a custom highlighted articles widget
 export const HIGHLIGHTED_ARTICLES_RFKID = 'search_home_highlight_blogs_skywings' 

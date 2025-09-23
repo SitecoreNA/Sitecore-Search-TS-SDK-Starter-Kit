@@ -23,7 +23,7 @@ export const HOME_HERO_RFKID = 'home_hero'
 export const DEFAULT_QUESTION = 'What can I do to conserve energy in a heatwave?'
 
 // Change if you choose to use a custom highlighted articles widget
-export const HIGHLIGHTED_ARTICLES_RFKID = 'search_home_highlight_blogs_skywings' 
+export const HIGHLIGHTED_ARTICLES_RFKID = 'search_home_highlighted_articles_gridwell'
 
 // Change if you want to show a different content type in the highlighted articles widget. This value is case-sensitive. Default is website_content.
 export const HIGHLIGHTED_ARTICLES_CONTENT_TYPE = 'Blog'

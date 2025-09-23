@@ -14,9 +14,9 @@ const Search = (): JSX.Element => {
 
   return (
     <>
-      <div className="bg-blue-700 flex justify-center py-20 px-4 bg-gradient-to-r from-blue-600 to-blue-800">
+      <div className="bg-gray-900 flex justify-center py-20 px-4 bg-cover bg-center bg-[url(/banner-img.jpg)]">
         <div className="w-[800px] text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-8 text-white">SkyWings Search</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-8 text-white">Gridwell Search</h1>
           <BasicSearch rfkId="rfkid_6" />
         </div>
       </div>
@@ -24,7 +24,7 @@ const Search = (): JSX.Element => {
         <div className="max-w-7xl mx-auto px-4 py-8">
           {query != '' &&
           <div className="mb-6">
-            <p className="text-gray-800 text-lg w-full text-left">Showing results for <strong className="text-blue-700 text-700">{`"${query}"`}</strong></p>
+            <p className="text-gray-800 text-lg w-full text-left">Showing results for <strong className="text-teal-600 text-700">{`"${query}"`}</strong></p>
           </div>}
           <QuestionsAnswers
             key={`${query}-questions`}
